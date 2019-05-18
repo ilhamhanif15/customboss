@@ -3,7 +3,7 @@
 
         <div class="menu-container">
             <div class="block-keep-ratio block-keep-ratio-2-1 block-width-full home">                                    
-                <a href="index.html" class="block-keep-ratio__content  main-menu-link">
+                <a href="<?= base_url() ?>" class="block-keep-ratio__content  main-menu-link">
                     <span class="main-menu-link-text">
                         HOME  
                     </span>                                        
@@ -33,14 +33,14 @@
 
         <div class="menu-container">                                
             <div class="block-keep-ratio  block-keep-ratio-1-1  block-width-half  pull-left  about-main">                                    
-                <a href="about.html" class="main-menu-link about block-keep-ratio__content flexbox-center">
+                <a href="<?= base_url().'about' ?>" class="main-menu-link about block-keep-ratio__content flexbox-center">
                     <i class="fa fa-user fa-4x main-menu-link-icon"></i>
                     ABOUT
                 </a>                                    
             </div>
 
             <div class="block-keep-ratio  block-keep-ratio-1-1  block-width-half  pull-right  contact-main">
-                <a href="contact.html" class="main-menu-link contact block-keep-ratio__content flexbox-center">
+                <a href="<?= base_url().'contact' ?>" class="main-menu-link contact block-keep-ratio__content flexbox-center">
                     <i class="fa fa-envelope-o fa-4x main-menu-link-icon"></i>
                     CONTACT
                 </a>                                
@@ -49,7 +49,7 @@
 
         <div class="menu-container">
             <div class="block-keep-ratio block-keep-ratio-1-1 block-keep-ratio-md-2-1 block-width-full gallery">                                    
-                <a href="gallery.html" class="main-menu-link  block-keep-ratio__content">
+                <a href="<?= base_url().'gallery' ?>" class="main-menu-link  block-keep-ratio__content">
                     <span class="main-menu-link-text">
                         GALLERY    
                     </span>                                            

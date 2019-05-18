@@ -3,7 +3,7 @@
 
 <?php $this->load->view('customboss/layout/header') ?>
 
-<body>
+<body class="<?php if (isset($bodyClass)){echo $bodyClass;} ?>">
     <div class="main-body">	
         <div class="container">
             <div class="row">               

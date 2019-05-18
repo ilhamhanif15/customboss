@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class LandingPage extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,25 +20,35 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['pageContent'] = 'home';
+		$data = [
+			'pageContent' => 'home',
+		];
 		$this->load->view('customboss/layout/master',$data);
 	}
 
 	public function about()
 	{
-		$data['pageContent'] = 'about';
+		$data = [
+			'pageContent' => 'about',
+		];
 		$this->load->view('customboss/layout/master',$data);
 	}
 
 	public function gallery()
 	{
-		$data['pageContent'] = 'gallery';
+		$data = [
+			'pageContent' => 'gallery',
+			'bodyClass' => 'gallery-page',
+		];
 		$this->load->view('customboss/layout/master',$data);
 	}
 
 	public function contact()
 	{
-		$data['pageContent'] = 'contact';
+		$data = [
+			'pageContent' => 'contact',
+			'bodyClass' => 'contact-page',
+		];
 		$this->load->view('customboss/layout/master',$data);
 	}
 }
