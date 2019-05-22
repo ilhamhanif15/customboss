@@ -63,69 +63,127 @@
     </div>
 
     <div class="row about-box-main">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 
             <div class="cards">
                 
-                <div class="box about_box_line card">
+                <div class="box about_box_line card" style="width: 100%">
                     <div class="box-icon">
-                        <img src="<?= base_url().'assets/' ?>images/suwaldi.jpg" alt="Image" class="img-responsive">
+                        <img src="<?= base_url().'assets/' ?>images/suwaldi.jpg" alt="Image" class="img-responsive" style="max-height: 240px;">
                     </div> <!-- .box-icon -->
-                    <div class="info">
+                    <div class="info" style="padding-left: 8px;">
                         <div class="about_box_title">
                             <h3>Suwaldi Mardana</h3>
-                            <h4>CEO</h4>
+                            <h4>Business Management, System Analysis (Founder)</h4>
                         </div>
                     </div> <!-- .info -->
                     <div class="line"></div>
-                    <p class="about_box_text">S1 Teknik Informatika</p>
-                </div>
-            
-                <div class="box about_box_line card">
-                    <div class="box-icon">
-                        <img src="<?= base_url().'assets/' ?>images/hanif.jpg" alt="Image" class="img-responsive">
-                    </div>
-                    <div class="info">
-                        <div class="about_box_title">
-                            <h3>Ilham Hanif Anjana</h3>
-                            <h4>Teknik</h4>
-                        </div>
-                    </div>
-                    <div class="line"></div>
-                    <p class="about_box_text">S1 Teknik Informatika</p>
+                    <p class="about_box_text" style="font-size: smaller;">
+                        Instagram : @IG
+                        <br/>
+                        Facebook : FB
+                        <br/>
+                        Contact Person : 081234567890 (WA)
+                        <br/>
+                        Line : @LineID
+                    </p>
                 </div>
 
-                <div class="box about_box_line card">
-                    <div class="box-icon">
-                        <img src="<?= base_url().'assets/' ?>images/faisal.jpg" alt="Image" class="img-responsive">
-                    </div> <!-- .box-icon -->
-                    <div class="info">
-                        <div class="about_box_title">
-                            <h3>Ananda Faisal Faritz</h3>
-                            <h4>Teknik</h4>
-                        </div>
-                    </div>
-                    <div class="line"></div>
-                    <p class="about_box_text">S1 Teknik Informatika</p>
                 </div>
-
-                <div class="box about_box_line card">
-                    <div class="box-icon">
-                        <img src="<?= base_url().'assets/' ?>images/sidik.jpg" alt="Image" class="img-responsive">
-                    </div> <!-- .box-icon -->
-                    <div class="info">
-                        <div class="about_box_title">
-                            <h3>Sidik Kurniawan</h3>
-                            <h4>Designer</h4>
-                        </div>
-                    </div>
-                    <div class="line"></div>
-                    <p class="about_box_text">Desain Komunikasi Visual</p>
-                </div>
-                  
-            </div>
             
         </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+
+            <div class="cards">
+            
+                <div class="box about_box_line card" style="width: 100%">
+                    <div class="box-icon">
+                        <img src="<?= base_url().'assets/' ?>images/hanif.jpg" alt="Image" cla style="max-height: 240px;"ss="img-responsive">
+                    </div>
+                    <div class="info" style="padding-left: 8px;">
+                        <div class="about_box_title">
+                            <h3>Ilham Hanif Anjana</h3>
+                            <h4>System Analysis, Programmer (Founder)</h4>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <p class="about_box_text" style="font-size: smaller;">
+                        Instagram : @IG
+                        <br/>
+                        Facebook : FB
+                        <br/>
+                        Contact Person : 081234567890 (WA)
+                        <br/>
+                        Line : @LineID
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+
+            <div class="cards">
+
+                <div class="box about_box_line card" style="width: 100%">
+                    <div class="box-icon">
+                        <img src="<?= base_url().'assets/' ?>images/faisal.jpg" alt="Image" class="img-responsive" style="max-height: 240px;">
+                    </div> <!-- .box-icon -->
+                    <div class="info" style="padding-left: 8px;">
+                        <div class="about_box_title">
+                            <h3>Ananda Faisal Faritz</h3>
+                            <h4>System Analysis, Programmer (Founder)</h4>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <p class="about_box_text" style="font-size: smaller;">
+                        Instagram : @IG
+                        <br/>
+                        Facebook : FB
+                        <br/>
+                        Contact Person : 081234567890 (WA)
+                        <br/>
+                        Line : @LineID
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+
+            <div class="cards">
+
+                <div class="box about_box_line card" style="width: 100%">
+                    <div class="box-icon">
+                        <img src="<?= base_url().'assets/' ?>images/sidik.jpg" alt="Image" class="img-responsive" style="max-height: 240px;">
+                    </div> <!-- .box-icon -->
+                    <div class="info" style="padding-left: 8px;">
+                        <div class="about_box_title">
+                            <h3>Sidik Kurniawan</h3>
+                            <h4>Designer, UI/UX (Founder)</h4>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <p class="about_box_text" style="font-size: smaller;">
+                        Instagram : @IG
+                        <br/>
+                        Facebook : FB
+                        <br/>
+                        Contact Person : 081234567890 (WA)
+                        <br/>
+                        Line : @LineID
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+                  
+            
         
     </div>
 
