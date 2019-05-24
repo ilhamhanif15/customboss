@@ -70,7 +70,7 @@ $route = [
 	/*---------------------PRINT CUT DOT CO----------------------*/
 	'printcut' => 'PC_Main/index',
 	'printcut/about' => 'PC_Main/about',
-	'printcut/contact' => 'PC_Main/contact',
+	'printcut/kontak' => 'PC_Main/contact',
 	'printcut/katalog' => 'PC_Main/katalogGrid',
 	'printcut/katalog/(:any)' => 'PC_Main/katalogSingle/$1', 
 	/*-----------------------------------------------------------*/

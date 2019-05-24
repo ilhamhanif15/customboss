@@ -112,10 +112,10 @@
           <a class="nav-link active" href="<?= base_url().'printcut' ?>">Beranda</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= base_url().'printcut/about' ?>">Tentang</a>
+          <a class="nav-link" href="<?= base_url().'printcut/katalog' ?>">Katalog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= base_url().'printcut/katalog' ?>">Katalog</a>
+          <a class="nav-link" href="<?= base_url().'printcut/about' ?>">Tentang</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url().'printcut/kontak' ?>">Kontak</a>

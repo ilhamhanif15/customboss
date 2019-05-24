@@ -1,3 +1,9 @@
+<style type="text/css">
+  .title-c{
+    background-color: #ffffffe6;
+    border-radius: 70px;
+  }
+</style>
 <!--/ Carousel Star /-->
 <div class="intro intro-carousel">
   <div id="carousel" class="owl-carousel owl-theme">
@@ -81,84 +87,83 @@
       <div class="col-md-12">
         <div class="title-wrap d-flex justify-content-between">
           <div class="title-box">
-            <h2 class="title-a">Our Services</h2>
+            <h2 class="title-a">Menyediakan</h2>
           </div>
         </div>
       </div>
     </div>
     <div class="row">
+
       <div class="col-md-4">
         <div class="card-box-c foo">
           <div class="card-header-c d-flex">
             <div class="card-box-ico">
-              <span class="fa fa-gamepad"></span>
+              <span class="fa fa-ticket"></span>
             </div>
             <div class="card-title-c align-self-center">
-              <h2 class="title-c">Lifestyle</h2>
+              <h2 class="title-c">Pilih Stikermu!</h2>
             </div>
           </div>
           <div class="card-body-c">
             <p class="content-c">
-              Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-              convallis a pellentesque
-              nec, egestas non nisi.
+              Berbagai macam <i>template</i> stiker yang tersedia, dan dapat di <i>custom</i> sendiri
             </p>
           </div>
           <div class="card-footer-c">
-            <a href="#" class="link-c link-icon">Read more
+            <a href="#" class="link-c link-icon">Selengkapnya
               <span class="ion-ios-arrow-forward"></span>
             </a>
           </div>
         </div>
       </div>
+
       <div class="col-md-4">
         <div class="card-box-c foo">
           <div class="card-header-c d-flex">
             <div class="card-box-ico">
-              <span class="fa fa-usd"></span>
+              <span class="fa fa-upload"></span>
             </div>
             <div class="card-title-c align-self-center">
-              <h2 class="title-c">Loans</h2>
+              <h2 class="title-c">Upload Desainmu</h2>
             </div>
           </div>
           <div class="card-body-c">
             <p class="content-c">
-              Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Mauris blandit
-              aliquet elit, eget tincidunt
-              nibh pulvinar a.
+              Kamu bisa <i>Upload</i> desainmu dan pilih bahannya sendiri
             </p>
           </div>
           <div class="card-footer-c">
-            <a href="#" class="link-c link-icon">Read more
+            <a href="#" class="link-c link-icon">Selengkapnya
               <span class="ion-ios-arrow-forward"></span>
             </a>
           </div>
         </div>
       </div>
+
       <div class="col-md-4">
         <div class="card-box-c foo">
           <div class="card-header-c d-flex">
             <div class="card-box-ico">
-              <span class="fa fa-home"></span>
+              <span class="fa fa-phone"></span>
             </div>
             <div class="card-title-c align-self-center">
-              <h2 class="title-c">Sell</h2>
+              <h2 class="title-c">Request Stiker!</h2>
             </div>
           </div>
           <div class="card-body-c">
             <p class="content-c">
-              Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-              convallis a pellentesque
-              nec, egestas non nisi.
+              Kamu dapat melakukan <i>Request</i> stiker kepada team kami, biarkan team kami yang mendesain stikermu!
             </p>
           </div>
           <div class="card-footer-c">
-            <a href="#" class="link-c link-icon">Read more
+            <a href="#" class="link-c link-icon">Selengkapnya
               <span class="ion-ios-arrow-forward"></span>
             </a>
           </div>
         </div>
       </div>
+
+
     </div>
   </div>
 </section>
