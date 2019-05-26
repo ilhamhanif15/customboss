@@ -1,11 +1,20 @@
+<style type="text/css">
+  .title-c{
+    background-color: white;
+  }
+
+  .list-kanan{
+    list-style: none;
+  }
+</style>
 <!--/ Intro Single star /-->
 <section class="intro-single">
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-lg-8">
         <div class="title-single-box">
-          <h1 class="title-single">304 Blaster Up</h1>
-          <span class="color-text-a">Chicago, IL 606543</span>
+          <h1 class="title-single">Stiker 1</h1>
+          <span class="color-text-a">Skotlet</span>
         </div>
       </div>
       <div class="col-md-12 col-lg-4">
@@ -18,7 +27,7 @@
               <a href="property-grid.html">Properties</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
-              304 Blaster Up
+              Stiker 1
             </li>
           </ol>
         </nav>
@@ -49,10 +58,10 @@
             <div class="property-price d-flex justify-content-center foo">
               <div class="card-header-c d-flex">
                 <div class="card-box-ico">
-                  <span class="ion-money">$</span>
+                  <span class="ion-money">Rp</span>
                 </div>
                 <div class="card-title-c align-self-center">
-                  <h5 class="title-c">15000</h5>
+                  <h5 class="title-c">25.000</h5>
                 </div>
               </div>
             </div>
@@ -60,45 +69,32 @@
               <div class="row">
                 <div class="col-sm-12">
                   <div class="title-box-d section-t4">
-                    <h3 class="title-d">Quick Summary</h3>
+                    <h3 class="title-d">Rincian</h3>
                   </div>
                 </div>
               </div>
               <div class="summary-list">
                 <ul class="list">
                   <li class="d-flex justify-content-between">
-                    <strong>Property ID:</strong>
-                    <span>1134</span>
+                    <strong>Nama :</strong>
+                    <span>Stiker 1</span>
                   </li>
                   <li class="d-flex justify-content-between">
-                    <strong>Location:</strong>
-                    <span>Chicago, IL 606543</span>
+                    <strong>Ukuran :</strong>
+                    <span>20x20 cm</span>
                   </li>
                   <li class="d-flex justify-content-between">
-                    <strong>Property Type:</strong>
-                    <span>House</span>
+                    <strong>Jenis :</strong>
+                    <span>Skotlet</span>
                   </li>
-                  <li class="d-flex justify-content-between">
-                    <strong>Status:</strong>
-                    <span>Sale</span>
+                  <li class="list-kanan justify-content-between">
+                    <strong>Warna Tersedia :</strong>
+                    <br/>
+                    <span>Merah, Biru, Kuning</span>
                   </li>
-                  <li class="d-flex justify-content-between">
-                    <strong>Area:</strong>
-                    <span>340m
-                      <sup>2</sup>
-                    </span>
-                  </li>
-                  <li class="d-flex justify-content-between">
-                    <strong>Beds:</strong>
-                    <span>4</span>
-                  </li>
-                  <li class="d-flex justify-content-between">
-                    <strong>Baths:</strong>
-                    <span>2</span>
-                  </li>
-                  <li class="d-flex justify-content-between">
-                    <strong>Garage:</strong>
-                    <span>1</span>
+                  <li class="list-kanan justify-content-between">
+                    <strong>Link :</strong><br/>
+                    <span><a href="#">ww.tokopedia.com/stiker1/0920902/0909</a></span>
                   </li>
                 </ul>
               </div>
@@ -108,7 +104,7 @@
             <div class="row">
               <div class="col-sm-12">
                 <div class="title-box-d">
-                  <h3 class="title-d">Property Description</h3>
+                  <h3 class="title-d">Deskripsi</h3>
                 </div>
               </div>
             </div>
@@ -126,7 +122,7 @@
                 pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada.
               </p>
             </div>
-            <div class="row section-t3">
+            <!-- <div class="row section-t3">
               <div class="col-sm-12">
                 <div class="title-box-d">
                   <h3 class="title-d">Amenities</h3>
@@ -145,7 +141,7 @@
                 <li>Sun Room</li>
                 <li>Concrete Flooring</li>
               </ul>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

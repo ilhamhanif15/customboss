@@ -1,3 +1,8 @@
+<style type="text/css">
+  .price-a {
+    background-color: #2eca6a;
+  }
+</style>
 <!--/ Intro Single star /-->
 <section class="intro-single">
   <div class="container">
@@ -41,288 +46,52 @@
           </form>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card-box-a card-shadow">
-          <div class="img-box-a">
-            <img src="<?= base_url().'assetsPC/' ?>img/property-1.jpg" alt="" class="img-a img-fluid">
-          </div>
-          <div class="card-overlay">
-            <div class="card-overlay-a-content">
-              <div class="card-header-a">
-                <h2 class="card-title-a">
-                  <a href="#">204 Mount
-                    <br /> Olive Road Two</a>
-                </h2>
-              </div>
-              <div class="card-body-a">
-                <div class="price-box d-flex">
-                  <span class="price-a">rent | $ 12.000</span>
+      <?php for ($i=0; $i < 6; $i++) { ?>
+        
+        <div class="col-md-4">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img src="<?= base_url().'assetsPC/' ?>img/property-1.jpg" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="#">Stiker
+                      <br /> <?= $i+1 ?></a>
+                  </h2>
                 </div>
-                <a href="<?= base_url().'printcut/katalog/tes' ?>" class="link-a">Click here to view
-                  <span class="ion-ios-arrow-forward"></span>
-                </a>
-              </div>
-              <div class="card-footer-a">
-                <ul class="card-info d-flex justify-content-around">
-                  <li>
-                    <h4 class="card-info-title">Area</h4>
-                    <span>340m
-                      <sup>2</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Beds</h4>
-                    <span>2</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Baths</h4>
-                    <span>4</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Garages</h4>
-                    <span>1</span>
-                  </li>
-                </ul>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">Rp. 25.000</span>
+                  </div>
+                  <a href="<?= base_url().'printcut/katalog/tes' ?>" class="link-a">Lihat Selengkapnya
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
+                </div>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Ukuran</h4>
+                      <span>20x20 cm
+                      </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Warna</h4>
+                      <span>Merah</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Jenis</h4>
+                      <span>Skotlet</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card-box-a card-shadow">
-          <div class="img-box-a">
-            <img src="<?= base_url().'assetsPC/' ?>img/property-3.jpg" alt="" class="img-a img-fluid">
-          </div>
-          <div class="card-overlay">
-            <div class="card-overlay-a-content">
-              <div class="card-header-a">
-                <h2 class="card-title-a">
-                  <a href="#">204 Mount
-                    <br /> Olive Road Two</a>
-                </h2>
-              </div>
-              <div class="card-body-a">
-                <div class="price-box d-flex">
-                  <span class="price-a">rent | $ 12.000</span>
-                </div>
-                <a href="<?= base_url().'printcut/katalog/tes' ?>" class="link-a">Click here to view
-                  <span class="ion-ios-arrow-forward"></span>
-                </a>
-              </div>
-              <div class="card-footer-a">
-                <ul class="card-info d-flex justify-content-around">
-                  <li>
-                    <h4 class="card-info-title">Area</h4>
-                    <span>340m
-                      <sup>2</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Beds</h4>
-                    <span>2</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Baths</h4>
-                    <span>4</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Garages</h4>
-                    <span>1</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card-box-a card-shadow">
-          <div class="img-box-a">
-            <img src="<?= base_url().'assetsPC/' ?>img/property-6.jpg" alt="" class="img-a img-fluid">
-          </div>
-          <div class="card-overlay">
-            <div class="card-overlay-a-content">
-              <div class="card-header-a">
-                <h2 class="card-title-a">
-                  <a href="#">204 Mount
-                    <br /> Olive Road Two</a>
-                </h2>
-              </div>
-              <div class="card-body-a">
-                <div class="price-box d-flex">
-                  <span class="price-a">rent | $ 12.000</span>
-                </div>
-                <a href="<?= base_url().'printcut/katalog/tes' ?>" class="link-a">Click here to view
-                  <span class="ion-ios-arrow-forward"></span>
-                </a>
-              </div>
-              <div class="card-footer-a">
-                <ul class="card-info d-flex justify-content-around">
-                  <li>
-                    <h4 class="card-info-title">Area</h4>
-                    <span>340m
-                      <sup>2</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Beds</h4>
-                    <span>2</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Baths</h4>
-                    <span>4</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Garages</h4>
-                    <span>1</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card-box-a card-shadow">
-          <div class="img-box-a">
-            <img src="<?= base_url().'assetsPC/' ?>img/property-7.jpg" alt="" class="img-a img-fluid">
-          </div>
-          <div class="card-overlay">
-            <div class="card-overlay-a-content">
-              <div class="card-header-a">
-                <h2 class="card-title-a">
-                  <a href="#">204 Mount
-                    <br /> Olive Road Two</a>
-                </h2>
-              </div>
-              <div class="card-body-a">
-                <div class="price-box d-flex">
-                  <span class="price-a">rent | $ 12.000</span>
-                </div>
-                <a href="<?= base_url().'printcut/katalog/tes' ?>" class="link-a">Click here to view
-                  <span class="ion-ios-arrow-forward"></span>
-                </a>
-              </div>
-              <div class="card-footer-a">
-                <ul class="card-info d-flex justify-content-around">
-                  <li>
-                    <h4 class="card-info-title">Area</h4>
-                    <span>340m
-                      <sup>2</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Beds</h4>
-                    <span>2</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Baths</h4>
-                    <span>4</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Garages</h4>
-                    <span>1</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card-box-a card-shadow">
-          <div class="img-box-a">
-            <img src="<?= base_url().'assetsPC/' ?>img/property-8.jpg" alt="" class="img-a img-fluid">
-          </div>
-          <div class="card-overlay">
-            <div class="card-overlay-a-content">
-              <div class="card-header-a">
-                <h2 class="card-title-a">
-                  <a href="#">204 Mount
-                    <br /> Olive Road Two</a>
-                </h2>
-              </div>
-              <div class="card-body-a">
-                <div class="price-box d-flex">
-                  <span class="price-a">rent | $ 12.000</span>
-                </div>
-                <a href="<?= base_url().'printcut/katalog/tes' ?>" class="link-a">Click here to view
-                  <span class="ion-ios-arrow-forward"></span>
-                </a>
-              </div>
-              <div class="card-footer-a">
-                <ul class="card-info d-flex justify-content-around">
-                  <li>
-                    <h4 class="card-info-title">Area</h4>
-                    <span>340m
-                      <sup>2</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Beds</h4>
-                    <span>2</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Baths</h4>
-                    <span>4</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Garages</h4>
-                    <span>1</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card-box-a card-shadow">
-          <div class="img-box-a">
-            <img src="<?= base_url().'assetsPC/' ?>img/property-10.jpg" alt="" class="img-a img-fluid">
-          </div>
-          <div class="card-overlay">
-            <div class="card-overlay-a-content">
-              <div class="card-header-a">
-                <h2 class="card-title-a">
-                  <a href="#">204 Mount
-                    <br /> Olive Road Two</a>
-                </h2>
-              </div>
-              <div class="card-body-a">
-                <div class="price-box d-flex">
-                  <span class="price-a">rent | $ 12.000</span>
-                </div>
-                <a href="<?= base_url().'printcut/katalog/tes' ?>" class="link-a">Click here to view
-                  <span class="ion-ios-arrow-forward"></span>
-                </a>
-              </div>
-              <div class="card-footer-a">
-                <ul class="card-info d-flex justify-content-around">
-                  <li>
-                    <h4 class="card-info-title">Area</h4>
-                    <span>340m
-                      <sup>2</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Beds</h4>
-                    <span>2</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Baths</h4>
-                    <span>4</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Garages</h4>
-                    <span>1</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+      <?php } ?>
     </div>
     <div class="row">
       <div class="col-sm-12">
