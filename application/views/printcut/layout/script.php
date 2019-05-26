@@ -11,3 +11,5 @@
 
 <!-- Template Main Javascript File -->
 <script src="<?= base_url().'assetsPC/'?>js/main.js"></script>
+
+<?php $this->load->view('printcut/js/'.$pageContent) ?>

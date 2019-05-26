@@ -179,15 +179,15 @@
         <div class="row section-t3">
           <div class="col-sm-12">
             <div class="title-box-d">
-              <h3 class="title-d">Contact Agent</h3>
+              <h3 class="title-d">Kontak Pemesanan</h3>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 col-lg-4">
+          <!-- <div class="col-md-6 col-lg-4">
             <img src="<?= base_url().'assetsPC/' ?>img/agent-4.jpg" alt="" class="img-fluid">
-          </div>
-          <div class="col-md-6 col-lg-4">
+          </div> -->
+          <div class="col-md-12 col-lg-6">
             <div class="property-agent">
               <h4 class="title-agent">Anabella Geller</h4>
               <p class="color-text-a">
@@ -246,7 +246,11 @@
           </div>
           <div class="col-md-12 col-lg-4">
             <div class="property-contact">
-              <form class="form-a">
+              <button class="btn btn-success w-100" id="btn-useEmail">Pesan Menggunakan Email</button>
+              <hr/>
+              <button class="btn btn-success w-100" id="btn-useWA">Pesan Menggunakan Whatsapp</button>
+              <hr/>
+              <form class="form-a" id="useEmail" style="display: none;">
                 <div class="row">
                   <div class="col-md-12 mb-1">
                     <div class="form-group">
