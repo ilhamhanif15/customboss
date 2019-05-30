@@ -77,10 +77,6 @@
                       </span>
                     </li>
                     <li>
-                      <h4 class="card-info-title">Warna</h4>
-                      <span>Merah</span>
-                    </li>
-                    <li>
                       <h4 class="card-info-title">Jenis</h4>
                       <span>Skotlet</span>
                     </li>
