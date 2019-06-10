@@ -23,11 +23,13 @@
                     <img src="<?= base_url().'assets/'?>images/home-img-2.jpg" alt="Image" class="img-responsive">
                 </div>
                 <div class="info float-container">
+                 <a href="<?= base_url().'printcut'?>">
                     <div class="col-sm-12 london-title">
                         <h3 class="text-uppercase">PrintCut.Co</h3>
                         <h4 class="text-uppercase">Product/Service</h4>
                     </div>
-                    <p>Penjelasan</p><hr />
+                 </a>
+                    <p>Menerima pembuatan design dan cutting stiker sesuai design yang anda inginkan.</p><hr />
                     <div class="col-sm-12 location-main"> 
                         <div class="pull-left location">
                             <i class="fa fa-map-marker fa-2x"></i><span>Bandung</span>
@@ -36,6 +38,7 @@
                             <a href="#"><i class="fa fa-star fa-2x"></i></a>
                             <a href="#"><i class="fa fa-user fa-2x"></i></a>
                             <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+                            <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
                         </div>
                     </div>
                 </div>
@@ -52,7 +55,7 @@
                         <h3 class="text-uppercase">NgodingWeb.Co</h3>
                         <h4 class="text-uppercase">Service</h4>
                     </div>
-                    <p>Penjelasan</p><hr />
+                    <p>Menerima pembuatan web sesuai dengan template yang disediakan atau yang anda inginkan.</p><hr />
                     <div class="col-sm-12 location-main"> 
                         <div class="pull-left location location2">
                             <i class="fa fa-map-marker fa-2x"></i><span>Bandung</span>
@@ -61,6 +64,7 @@
                             <a href="#"><i class="fa fa-star fa-2x"></i></a>
                             <a href="#"><i class="fa fa-user fa-2x"></i></a>
                             <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+                            <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
                         </div>
                     </div>
                 </div>
