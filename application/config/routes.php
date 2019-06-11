@@ -89,4 +89,8 @@ $route = [
 	'admin/katalog/tambah/proses' => 'Admin_Main/katalog_tambah',
 	'admin/order/list' => 'Admin_Main/order_list',
 	/*-----------------------------------------------------------*/
+
+	/*---------------------JASA WEB DOT CO----------------------*/
+	'jasaweb' => 'JW_Main/index',
+	/*-----------------------------------------------------------*/
 ];

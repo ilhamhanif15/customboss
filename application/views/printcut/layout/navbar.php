@@ -101,7 +101,7 @@
       <span></span>
       <span></span>
     </button>
-    <a class="navbar-brand text-brand" href="index.html">Print Cut<span class="color-b">.CO</span></a>
+    <a class="navbar-brand text-brand" href="<?= base_url().'printcut'?>">PrintCut<span class="color-b">.co</span></a>
     <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
       data-target="#navbarTogglerDemo01" aria-expanded="false">
       <span class="fa fa-search" aria-hidden="true"></span>
@@ -111,14 +111,14 @@
         <li class="nav-item">
           <a class="nav-link active" href="<?= base_url().'printcut' ?>">Beranda</a>
         </li>
-        <li class="nav-item">
+          <li class="nav-item">
           <a class="nav-link" href="<?= base_url().'printcut/katalog' ?>">Katalog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= base_url().'printcut/about' ?>">Tentang</a>
+          <a class="nav-link" href="<?= base_url().'printcut/about' ?>">Cara Pemesanan</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= base_url().'printcut/kontak' ?>">Kontak</a>
+          <a class="nav-link" href="<?= base_url().'printcut/contact' ?>">Kontak</a>
         </li>
       </ul>
     </div>
