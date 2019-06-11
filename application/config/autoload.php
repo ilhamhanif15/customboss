@@ -89,7 +89,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url');
+$autoload['helper'] = array('url','security');
 
 /*
 | -------------------------------------------------------------------
@@ -132,4 +132,9 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array();
+$autoload['model'] = array(
+	'Additional',
+	'Model_User' => 'M_User',
+	'Model_PC_Stiker' => 'PC_Stiker',
+	'Model_PC_Order_Upload' => 'PC_OrderUp'
+);
