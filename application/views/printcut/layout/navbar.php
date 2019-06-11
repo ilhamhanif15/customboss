@@ -101,7 +101,7 @@
       <span></span>
       <span></span>
     </button>
-    <a class="navbar-brand text-brand" href="<?= base_url().'PC_Main/index'?>">Print Cut<span class="color-b">.CO</span></a>
+    <a class="navbar-brand text-brand" href="<?= base_url().'printcut'?>">PrintCut<span class="color-b">.co</span></a>
     <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
       data-target="#navbarTogglerDemo01" aria-expanded="false">
       <span class="fa fa-search" aria-hidden="true"></span>

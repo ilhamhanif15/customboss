@@ -20,7 +20,7 @@
       <div class="col-sm-12">
         <div class="contact-map box">
           <div id="map" class="contact-map">
-            <iframe src="https://maps.google.com/maps?q=Bandung&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            <iframe src="https://maps.google.com/maps?q=bandung&t=&z=13&ie=UTF8&iwloc=&output=embed"
               width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
         </div>
@@ -201,6 +201,11 @@
                       <i class="fa fa-instagram" aria-hidden="true"></i>
                     </a>
                   </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -248,6 +253,11 @@
                   <li class="list-inline-item">
                     <a href="#" class="link-one">
                       <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
                     </a>
                   </li>
                 </ul>
@@ -299,6 +309,11 @@
                       <i class="fa fa-instagram" aria-hidden="true"></i>
                     </a>
                   </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -346,6 +361,11 @@
                   <li class="list-inline-item">
                     <a href="#" class="link-one">
                       <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="link-one">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
                     </a>
                   </li>
                 </ul>

@@ -74,4 +74,8 @@ $route = [
 	'printcut/katalog' => 'PC_Main/katalogGrid',
 	'printcut/katalog/(:any)' => 'PC_Main/katalogSingle/$1', 
 	/*-----------------------------------------------------------*/
+
+	/*---------------------JASA WEB DOT CO----------------------*/
+	'jasaweb' => 'JW_Main/index',
+	/*-----------------------------------------------------------*/
 ];

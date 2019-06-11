@@ -51,10 +51,12 @@
                     <img src="<?= base_url().'assets/'?>images/home-img-3.jpg" alt="Image" class="img-responsive">
                 </div>
                 <div class="info float-container">
+                  <a href="<?= base_url().'jasaweb'?>">
                     <div class="col-sm-12 london-title paris-title">
-                        <h3 class="text-uppercase">NgodingWeb.Co</h3>
+                        <h3 class="text-uppercase">Jasa Web.Co</h3>
                         <h4 class="text-uppercase">Service</h4>
                     </div>
+                </a>
                     <p>Menerima pembuatan web sesuai dengan template yang disediakan atau yang anda inginkan.</p><hr />
                     <div class="col-sm-12 location-main"> 
                         <div class="pull-left location location2">
