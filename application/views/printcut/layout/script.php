@@ -6,6 +6,7 @@
 <script src="<?= base_url().'assetsPC/'?>lib/easing/easing.min.js"></script>
 <script src="<?= base_url().'assetsPC/'?>lib/owlcarousel/owl.carousel.min.js"></script>
 <script src="<?= base_url().'assetsPC/'?>lib/scrollreveal/scrollreveal.min.js"></script>
+<script src="<?= base_url().'assetsPC/'?>js/lottie.js"></script>
 <!-- Contact Form JavaScript File -->
 <script src="<?= base_url().'assetsPC/'?>contactform/contactform.js"></script>
 

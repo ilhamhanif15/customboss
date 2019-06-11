@@ -72,6 +72,21 @@ $route = [
 	'printcut/about' => 'PC_Main/about',
 	'printcut/kontak' => 'PC_Main/contact',
 	'printcut/katalog' => 'PC_Main/katalogGrid',
-	'printcut/katalog/(:any)' => 'PC_Main/katalogSingle/$1', 
+	'printcut/katalog/(:any)' => 'PC_Main/katalogSingle/$1',
+	'printcut/order-desain' => 'PC_Main/order_desain',
+	/*-----------------------------------------------------------*/
+
+	/*---------------------Authentication------------------------*/
+	'admin/auth' => 'Auth_C/auth',
+	'admin/logout' => 'Auth_C/logout',
+	/*-----------------------------------------------------------*/
+
+	/*--------------------Admin----------------------------------*/
+	'admin/home' => 'Admin_Main/index',
+	'admin/login' => 'Admin_Main/login',
+	'admin/katalog/list' => 'Admin_Main/katalog_list',
+	'admin/katalog/tambah' => 'Admin_Main/katalog_tambah_view',
+	'admin/katalog/tambah/proses' => 'Admin_Main/katalog_tambah',
+	'admin/order/list' => 'Admin_Main/order_list',
 	/*-----------------------------------------------------------*/
 ];

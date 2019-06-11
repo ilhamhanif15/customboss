@@ -3,7 +3,96 @@
     background-color: #ffffffe6;
     border-radius: 70px;
   }
+
+  .btn-circle{
+    margin-top: 20px;
+    height: 52px;
+    border-radius: 80px;
+    font-size: 24px;
+  }
+
+  .form-control:focus {
+    border-color: #2eca6a;
+    box-shadow: inset 0 1px 1px #2eca6a, 0 0 8px #2eca6a;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+
+  .form-lanjutan{
+    display: none;
+  }
+
+  .custom-upload {
+    padding: 1.1rem;
+    border-radius: 70px;
+    background-color: #1c7a40;
+  }
+
+  .custom-upload > .fa {
+    font-size: xx-large;
+    color: white;
+  }
+
+  .title-b {
+    font-size:  xx-large;
+    margin-left: 5px;
+    margin-top: 5px;
+    color: white;
+  }
+
+  .custom-upload-section {
+    background-color: #1c7a40;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+  }
+
+  #form-upload > .form-group > small {
+    color: #c8c8c8 !important;
+  }
+
+  .upload_success {
+    position: fixed;
+    z-index: 9999;
+    background-color: #00000087;
+    width: 100%;
+    height: 100%;
+  }
+
+  .animate_f {
+    height: inherit;
+    width: 14rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .an_wrap {
+    width: auto;
+    height: auto;
+    background-color: white;
+    margin-top: 15vw;
+    padding: 1.5rem;
+  }
+
+  .text-scs-upload {
+    font-style: oblique;
+    text-align: left;
+  }
+
 </style>
+
+<?php if( $this->session->flashdata('success_msg_upload') !== NULL ) { ?>
+<div class="upload_success">
+  <div class="an_wrap row">
+    <div class="col-md-3 col-sm-12 offset-md-2">
+      <div id="success_animate" class="animate_f"></div>
+    </div>
+    <div class="col-md-7 col-sm-12 m-auto">
+      <h2 class="text-scs-upload">Desain Berhasil Terkirim</h2>
+      <small style="font-size: 100%;">Terima Kasih, desain anda akan kami buat. Anda akan dihubungi oleh kami dengan segera</small>
+    </div>
+  </div>
+</div>
+<?php } ?>
+
 <!--/ Carousel Star /-->
 <div class="intro intro-carousel">
   <div id="carousel" class="owl-carousel owl-theme">
@@ -110,7 +199,7 @@
             </p>
           </div>
           <div class="card-footer-c">
-            <a href="#" class="link-c link-icon">Selengkapnya
+            <a href="./printcut/katalog" class="link-c link-icon">Selengkapnya
               <span class="ion-ios-arrow-forward"></span>
             </a>
           </div>
@@ -133,7 +222,7 @@
             </p>
           </div>
           <div class="card-footer-c">
-            <a href="#" class="link-c link-icon">Selengkapnya
+            <a href="#" id="upload-desain-sel" class="link-c link-icon">Selengkapnya
               <span class="ion-ios-arrow-forward"></span>
             </a>
           </div>
@@ -156,7 +245,7 @@
             </p>
           </div>
           <div class="card-footer-c">
-            <a href="#" class="link-c link-icon">Selengkapnya
+            <a href="./printcut/kontak" class="link-c link-icon">Selengkapnya
               <span class="ion-ios-arrow-forward"></span>
             </a>
           </div>
@@ -176,10 +265,10 @@
       <div class="col-md-12">
         <div class="title-wrap d-flex justify-content-between">
           <div class="title-box">
-            <h2 class="title-a">Latest Properties</h2>
+            <h2 class="title-a">Stiker Terbaru</h2>
           </div>
           <div class="title-link">
-            <a href="property-grid.html">All Property
+            <a href="./printcut/katalog">Lihat Katalog
               <span class="ion-ios-arrow-forward"></span>
             </a>
           </div>
@@ -187,46 +276,41 @@
       </div>
     </div>
     <div id="property-carousel" class="owl-carousel owl-theme">
+      <?php 
+      foreach ($latestStiker as $x) {
+        //Encrypt ID
+        $enc_id = encrypt_url($x->id);
+      ?>
       <div class="carousel-item-b">
         <div class="card-box-a card-shadow">
           <div class="img-box-a">
-            <img src="<?= base_url().'assetsPC/'?>img/property-6.jpg" alt="" class="img-a img-fluid">
+            <img src="<?= base_url().'assetsPC/uploads/'.$x->gambar ?>" style="height: 450px;width: 350px;" alt="" class="img-a img-fluid">
           </div>
           <div class="card-overlay">
             <div class="card-overlay-a-content">
               <div class="card-header-a">
                 <h2 class="card-title-a">
-                  <a href="<?= base_url().'printcut/katalog/tes' ?>">206 Mount
-                    <br /> Olive Road Two</a>
+                  <a href="<?= base_url().'printcut/katalog/'.$enc_id ?>"><?= $x->nama ?></a>
                 </h2>
               </div>
               <div class="card-body-a">
                 <div class="price-box d-flex">
-                  <span class="price-a">rent | $ 12.000</span>
+                  <span class="price-a">Rp. <?= $x->harga ?></span>
                 </div>
-                <a href="#" class="link-a">Click here to view
+                <a href="<?= base_url().'printcut/katalog/'.$enc_id ?>" class="link-a">Lihat Selengkapnya
                   <span class="ion-ios-arrow-forward"></span>
                 </a>
               </div>
               <div class="card-footer-a">
                 <ul class="card-info d-flex justify-content-around">
                   <li>
-                    <h4 class="card-info-title">Area</h4>
-                    <span>340m
-                      <sup>2</sup>
+                    <h4 class="card-info-title">Ukuran</h4>
+                    <span><?= $x->ukuran ?>
                     </span>
                   </li>
                   <li>
-                    <h4 class="card-info-title">Beds</h4>
-                    <span>2</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Baths</h4>
-                    <span>4</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Garages</h4>
-                    <span>1</span>
+                    <h4 class="card-info-title">Jenis</h4>
+                    <span><?= $x->jenis ?></span>
                   </li>
                 </ul>
               </div>
@@ -234,531 +318,77 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item-b">
-        <div class="card-box-a card-shadow">
-          <div class="img-box-a">
-            <img src="<?= base_url().'assetsPC/'?>img/property-3.jpg" alt="" class="img-a img-fluid">
-          </div>
-          <div class="card-overlay">
-            <div class="card-overlay-a-content">
-              <div class="card-header-a">
-                <h2 class="card-title-a">
-                  <a href="<?= base_url().'printcut/katalog/tes' ?>">157 West
-                    <br /> Central Park</a>
-                </h2>
-              </div>
-              <div class="card-body-a">
-                <div class="price-box d-flex">
-                  <span class="price-a">rent | $ 12.000</span>
-                </div>
-                <a href="<?= base_url().'printcut/katalog/tes' ?>" class="link-a">Click here to view
-                  <span class="ion-ios-arrow-forward"></span>
-                </a>
-              </div>
-              <div class="card-footer-a">
-                <ul class="card-info d-flex justify-content-around">
-                  <li>
-                    <h4 class="card-info-title">Area</h4>
-                    <span>340m
-                      <sup>2</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Beds</h4>
-                    <span>2</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Baths</h4>
-                    <span>4</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Garages</h4>
-                    <span>1</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item-b">
-        <div class="card-box-a card-shadow">
-          <div class="img-box-a">
-            <img src="<?= base_url().'assetsPC/'?>img/property-7.jpg" alt="" class="img-a img-fluid">
-          </div>
-          <div class="card-overlay">
-            <div class="card-overlay-a-content">
-              <div class="card-header-a">
-                <h2 class="card-title-a">
-                  <a href="<?= base_url().'printcut/katalog/tes' ?>">245 Azabu
-                    <br /> Nishi Park let</a>
-                </h2>
-              </div>
-              <div class="card-body-a">
-                <div class="price-box d-flex">
-                  <span class="price-a">rent | $ 12.000</span>
-                </div>
-                <a href="<?= base_url().'printcut/katalog/tes' ?>" class="link-a">Click here to view
-                  <span class="ion-ios-arrow-forward"></span>
-                </a>
-              </div>
-              <div class="card-footer-a">
-                <ul class="card-info d-flex justify-content-around">
-                  <li>
-                    <h4 class="card-info-title">Area</h4>
-                    <span>340m
-                      <sup>2</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Beds</h4>
-                    <span>2</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Baths</h4>
-                    <span>4</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Garages</h4>
-                    <span>1</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item-b">
-        <div class="card-box-a card-shadow">
-          <div class="img-box-a">
-            <img src="<?= base_url().'assetsPC/'?>img/property-10.jpg" alt="" class="img-a img-fluid">
-          </div>
-          <div class="card-overlay">
-            <div class="card-overlay-a-content">
-              <div class="card-header-a">
-                <h2 class="card-title-a">
-                  <a href="<?= base_url().'printcut/katalog/tes' ?>">204 Montal
-                    <br /> South Bela Two</a>
-                </h2>
-              </div>
-              <div class="card-body-a">
-                <div class="price-box d-flex">
-                  <span class="price-a">rent | $ 12.000</span>
-                </div>
-                <a href="<?= base_url().'printcut/katalog/tes' ?>" class="link-a">Click here to view
-                  <span class="ion-ios-arrow-forward"></span>
-                </a>
-              </div>
-              <div class="card-footer-a">
-                <ul class="card-info d-flex justify-content-around">
-                  <li>
-                    <h4 class="card-info-title">Area</h4>
-                    <span>340m
-                      <sup>2</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Beds</h4>
-                    <span>2</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Baths</h4>
-                    <span>4</span>
-                  </li>
-                  <li>
-                    <h4 class="card-info-title">Garages</h4>
-                    <span>1</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <?php 
+        }
+      ?>
     </div>
   </div>
 </section>
 <!--/ Property End /-->
 
-<!--/ Agents Star /-->
-<section class="section-agents section-t8">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="title-wrap d-flex justify-content-between">
-          <div class="title-box">
-            <h2 class="title-a">Best Agents</h2>
-          </div>
-          <div class="title-link">
-            <a href="agents-grid.html">All Agents
-              <span class="ion-ios-arrow-forward"></span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card-box-d">
-          <div class="card-img-d">
-            <img src="<?= base_url().'assetsPC/'?>img/agent-4.jpg" alt="" class="img-d img-fluid">
-          </div>
-          <div class="card-overlay card-overlay-hover">
-            <div class="card-header-d">
-              <div class="card-title-d align-self-center">
-                <h3 class="title-d">
-                  <a href="agent-single.html" class="link-two">Suwaldi
-                    <br> Mardana</a>
-                </h3>
-              </div>
-            </div>
-            <div class="card-body-d">
-              <p class="content-d color-text-a">
-                Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
-              </p>
-              <div class="info-agents color-a">
-                <p>
-                  <strong>Phone: </strong> +54 356 945234</p>
-                <p>
-                  <strong>Email: </strong> agents@example.com</p>
-              </div>
-            </div>
-            <div class="card-footer-d">
-              <div class="socials-footer d-flex justify-content-center">
-                <ul class="list-inline">
-                  <li class="list-inline-item">
-                    <a href="#" class="link-one">
-                      <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#" class="link-one">
-                      <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#" class="link-one">
-                      <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#" class="link-one">
-                      <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#" class="link-one">
-                      <i class="fa fa-dribbble" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card-box-d">
-          <div class="card-img-d">
-            <img src="<?= base_url().'assetsPC/'?>img/agent-1.jpg" alt="" class="img-d img-fluid">
-          </div>
-          <div class="card-overlay card-overlay-hover">
-            <div class="card-header-d">
-              <div class="card-title-d align-self-center">
-                <h3 class="title-d">
-                  <a href="agent-single.html" class="link-two">Ilham Hanif
-                    <br> Anjana</a>
-                </h3>
-              </div>
-            </div>
-            <div class="card-body-d">
-              <p class="content-d color-text-a">
-                Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
-              </p>
-              <div class="info-agents color-a">
-                <p>
-                  <strong>Phone: </strong> +54 356 945234</p>
-                <p>
-                  <strong>Email: </strong> agents@example.com</p>
-              </div>
-            </div>
-            <div class="card-footer-d">
-              <div class="socials-footer d-flex justify-content-center">
-                <ul class="list-inline">
-                  <li class="list-inline-item">
-                    <a href="#" class="link-one">
-                      <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#" class="link-one">
-                      <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#" class="link-one">
-                      <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#" class="link-one">
-                      <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#" class="link-one">
-                      <i class="fa fa-dribbble" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card-box-d">
-          <div class="card-img-d">
-            <img src="<?= base_url().'assetsPC/'?>img/agent-5.jpg" alt="" class="img-d img-fluid">
-          </div>
-          <div class="card-overlay card-overlay-hover">
-            <div class="card-header-d">
-              <div class="card-title-d align-self-center">
-                <h3 class="title-d">
-                  <a href="agent-single.html" class="link-two">Ananda Faisal
-                    <br> Faritz</a>
-                </h3>
-              </div>
-            </div>
-            <div class="card-body-d">
-              <p class="content-d color-text-a">
-                Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
-              </p>
-              <div class="info-agents color-a">
-                <p>
-                  <strong>Phone: </strong> +54 356 945234</p>
-                <p>
-                  <strong>Email: </strong> agents@example.com</p>
-              </div>
-            </div>
-            <div class="card-footer-d">
-              <div class="socials-footer d-flex justify-content-center">
-                <ul class="list-inline">
-                  <li class="list-inline-item">
-                    <a href="#" class="link-one">
-                      <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#" class="link-one">
-                      <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#" class="link-one">
-                      <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#" class="link-one">
-                      <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#" class="link-one">
-                      <i class="fa fa-dribbble" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--/ Agents End /-->
-
-<!--/ News Star /-->
-<section class="section-news section-t8">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="title-wrap d-flex justify-content-between">
-          <div class="title-box">
-            <h2 class="title-a">Latest News</h2>
-          </div>
-          <div class="title-link">
-            <a href="blog-grid.html">All News
-              <span class="ion-ios-arrow-forward"></span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="new-carousel" class="owl-carousel owl-theme">
-      <div class="carousel-item-c">
-        <div class="card-box-b card-shadow news-box">
-          <div class="img-box-b">
-            <img src="<?= base_url().'assetsPC/'?>img/post-2.jpg" alt="" class="img-b img-fluid">
-          </div>
-          <div class="card-overlay">
-            <div class="card-header-b">
-              <div class="card-category-b">
-                <a href="#" class="category-b">House</a>
-              </div>
-              <div class="card-title-b">
-                <h2 class="title-2">
-                  <a href="blog-single.html">House is comming
-                    <br> new</a>
-                </h2>
-              </div>
-              <div class="card-date">
-                <span class="date-b">18 Sep. 2017</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item-c">
-        <div class="card-box-b card-shadow news-box">
-          <div class="img-box-b">
-            <img src="<?= base_url().'assetsPC/'?>img/post-5.jpg" alt="" class="img-b img-fluid">
-          </div>
-          <div class="card-overlay">
-            <div class="card-header-b">
-              <div class="card-category-b">
-                <a href="#" class="category-b">Travel</a>
-              </div>
-              <div class="card-title-b">
-                <h2 class="title-2">
-                  <a href="blog-single.html">Travel is comming
-                    <br> new</a>
-                </h2>
-              </div>
-              <div class="card-date">
-                <span class="date-b">18 Sep. 2017</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item-c">
-        <div class="card-box-b card-shadow news-box">
-          <div class="img-box-b">
-            <img src="<?= base_url().'assetsPC/'?>img/post-7.jpg" alt="" class="img-b img-fluid">
-          </div>
-          <div class="card-overlay">
-            <div class="card-header-b">
-              <div class="card-category-b">
-                <a href="#" class="category-b">Park</a>
-              </div>
-              <div class="card-title-b">
-                <h2 class="title-2">
-                  <a href="blog-single.html">Park is comming
-                    <br> new</a>
-                </h2>
-              </div>
-              <div class="card-date">
-                <span class="date-b">18 Sep. 2017</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item-c">
-        <div class="card-box-b card-shadow news-box">
-          <div class="img-box-b">
-            <img src="<?= base_url().'assetsPC/'?>img/post-3.jpg" alt="" class="img-b img-fluid">
-          </div>
-          <div class="card-overlay">
-            <div class="card-header-b">
-              <div class="card-category-b">
-                <a href="#" class="category-b">Travel</a>
-              </div>
-              <div class="card-title-b">
-                <h2 class="title-2">
-                  <a href="#">Travel is comming
-                    <br> new</a>
-                </h2>
-              </div>
-              <div class="card-date">
-                <span class="date-b">18 Sep. 2017</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--/ News End /-->
-
 <!--/ Testimonials Star /-->
-<section class="section-testimonials section-t8 nav-arrow-a">
+<section class="custom-upload-section section-testimonials section-t8 nav-arrow-a" id="upload-contain">
   <div class="container">
     <div class="row">
+
       <div class="col-md-12">
-        <div class="title-wrap d-flex justify-content-between">
-          <div class="title-box">
-            <h2 class="title-a">Testimonials</h2>
+        <div class="card-box-c foo">
+          <div class="card-header-c d-flex">
+            <div class="card-box-ico custom-upload">
+              <span class="fa fa-upload"></span>
+            </div>
+            <div class="card-title-c align-self-center">
+              <h2 class="title-b">Upload Desainmu</h2>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
-    <div id="testimonial-carousel" class="owl-carousel owl-arrow">
-      <div class="carousel-item-a">
-        <div class="testimonials-box">
-          <div class="row">
-            <div class="col-sm-12 col-md-6">
-              <div class="testimonial-img">
-                <img src="<?= base_url().'assetsPC/'?>img/testimonial-1.jpg" alt="" class="img-fluid">
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-6">
-              <div class="testimonial-ico">
-                <span class="ion-ios-quote"></span>
-              </div>
-              <div class="testimonials-content">
-                <p class="testimonial-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cupiditate ea nam praesentium
-                  debitis hic ber quibusdam
-                  voluptatibus officia expedita corpori.
-                </p>
-              </div>
-              <div class="testimonial-author-box">
-                <img src="<?= base_url().'assetsPC/'?>img/mini-testimonial-1.jpg" alt="" class="testimonial-avatar">
-                <h5 class="testimonial-author">Albert & Erika</h5>
-              </div>
+    <div class="container">
+      <div class="testimonials-box foo">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <div class="testimonials-content">
+              <p class="testimonial-text" style="margin-top: 0px;">
+                Buat Stikermu sendiri dengan upload desainmu sendiri dengan mudah. Pilih File Desainmu sendiri
+                lalu upload dan isi data dirimu, akan kami hubungi secepatnya jika desain sudah siap !
+              </p>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="carousel-item-a">
-        <div class="testimonials-box">
-          <div class="row">
-            <div class="col-sm-12 col-md-6">
-              <div class="testimonial-img">
-                <img src="<?= base_url().'assetsPC/'?>img/testimonial-2.jpg" alt="" class="img-fluid">
+          <div class="col-sm-12 col-md-6">
+            <form id="form-upload" method="post" enctype="multipart/form-data" action="./printcut/order-desain">
+              <div class="custom-file form-group">
+                <input type="file" class="custom-file-input form-control" id="customFile" name="file" accept="image/x-png,image/jpeg">
+                <label class="custom-file-label" for="customFile">Pilih File</label>
+                <small class="form-text text-muted">
+                  *Hanya dapat melakukan upload File Gambar (.jpg .jpeg .png)
+                </small>
+                <div style="display: none;" class="invalid-feedback" id="wrong-ext">Ekstensi File tidak diperbolehkan, hanya dapat melakukan upload untuk file gambar (.jpg .jpeg .png)</div>
               </div>
-            </div>
-            <div class="col-sm-12 col-md-6">
-              <div class="testimonial-ico">
-                <span class="ion-ios-quote"></span>
+              <div class="form-group form-lanjutan" style="margin-top: 10px;">
+                <label style="color: white;">Selanjutnya: Isi Data Diri Anda<br/>Nama :</label>
+                <input type="text" class="form-control" id="form-nama"
+                  placeholder="Masukkan Nama Lengkap" required name="nama" >
               </div>
-              <div class="testimonials-content">
-                <p class="testimonial-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cupiditate ea nam praesentium
-                  debitis hic ber quibusdam
-                  voluptatibus officia expedita corpori.
-                </p>
+              <div class="form-group form-lanjutan">
+                <label style="color: white;">Kontak :</label>
+                <input type="text" class="form-control" id="form-kontak"
+                  placeholder="Masukkan Kontak" required name="kontak" >
+                <small class="form-text text-muted">
+                  *Masukkan Kontak yang dapat dihubungi<br/>
+                  Contoh: @infocustomboss (LINE), 08XXXXXXXX (WA), infocustomboss@gmail.com, dll
+                </small>
               </div>
-              <div class="testimonial-author-box">
-                <img src="<?= base_url().'assetsPC/'?>img/mini-testimonial-2.jpg" alt="" class="testimonial-avatar">
-                <h5 class="testimonial-author">Pablo & Emma</h5>
+              <div class="form-group form-lanjutan">
+                <label style="color: white;">Catatan :</label>
+                <textarea id="form-catatan" class="form-control" placeholder="Beri Catatan Mengenai Desain atau Lainnya" name="catatan" cols="45"
+                  rows="5"></textarea>
               </div>
-            </div>
+              <div class="form-group form-lanjutan">
+                <button type="submit" id="btnUpload" class="btn btn-outline-light form-control btn-circle"><i class="fa fa-upload"></i> Kirimkan Desainmu</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

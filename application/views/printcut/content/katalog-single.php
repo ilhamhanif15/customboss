@@ -13,21 +13,21 @@
     <div class="row">
       <div class="col-md-12 col-lg-8">
         <div class="title-single-box">
-          <h1 class="title-single">Stiker 1</h1>
-          <span class="color-text-a">Skotlet</span>
+          <h1 class="title-single"><?= $stiker->nama ?></h1>
+          <span class="color-text-a"><?= $stiker->jenis ?></span>
         </div>
       </div>
       <div class="col-md-12 col-lg-4">
         <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a href="index.html">Home</a>
+              <a href="/customboss/printcut">Home</a>
             </li>
             <li class="breadcrumb-item">
-              <a href="property-grid.html">Properties</a>
+              <a href="./">Katalog</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
-              Stiker 1
+              <?= $stiker->nama ?>
             </li>
           </ol>
         </nav>
@@ -43,15 +43,19 @@
     <div class="row">
       <div class="col-sm-12">
         <div id="property-single-carousel" class="owl-carousel owl-arrow gallery-property">
-          <div class="carousel-item-b">
-            <img src="<?= base_url().'assetsPC/' ?>img/slide-2.jpg" alt="">
-          </div>
-          <div class="carousel-item-b">
-            <img src="<?= base_url().'assetsPC/' ?>img/slide-3.jpg" alt="">
-          </div>
-          <div class="carousel-item-b">
-            <img src="<?= base_url().'assetsPC/' ?>img/slide-1.jpg" alt="">
-          </div>
+          <?php
+            foreach (explode(";",$stiker->highlight) as $c) {
+              if($c != Null){
+          ?>
+          
+            <div class="carousel-item-b">
+              <img src="<?= base_url().'assetsPC/uploads/'.$c ?>" style="max-height: 500px;" alt="">
+            </div>
+
+        <?php 
+              } 
+            } 
+        ?>
         </div>
         <div class="row justify-content-between">
           <div class="col-md-5 col-lg-4">
@@ -61,7 +65,7 @@
                   <span class="ion-money">Rp</span>
                 </div>
                 <div class="card-title-c align-self-center">
-                  <h5 class="title-c">25.000</h5>
+                  <h5 class="title-c"><?= $stiker->harga ?></h5>
                 </div>
               </div>
             </div>
@@ -77,24 +81,33 @@
                 <ul class="list">
                   <li class="d-flex justify-content-between">
                     <strong>Nama :</strong>
-                    <span>Stiker 1</span>
+                    <span><?= $stiker->nama ?></span>
                   </li>
                   <li class="d-flex justify-content-between">
                     <strong>Ukuran :</strong>
-                    <span>20x20 cm</span>
+                    <span><?= $stiker->ukuran ?></span>
                   </li>
                   <li class="d-flex justify-content-between">
                     <strong>Jenis :</strong>
-                    <span>Skotlet</span>
+                    <span><?= $stiker->jenis ?></span>
                   </li>
                   <li class="list-kanan justify-content-between">
                     <strong>Warna Tersedia :</strong>
                     <br/>
-                    <span>Merah, Biru, Kuning</span>
+                    <span><?= $stiker->warna ?></span>
                   </li>
                   <li class="list-kanan justify-content-between">
                     <strong>Link :</strong><br/>
-                    <span><a href="#">ww.tokopedia.com/stiker1/0920902/0909</a></span>
+                    <span>
+                      <?php
+                        foreach (explode(";",$stiker->link_os) as $c) {
+                          if ($c != '' || $c != NULL){
+                            $d = explode(",",strval($c));
+                            echo '<a href="'.$d[0].'">'.$d[1].'</a>';
+                          }
+                        }
+                      ?>
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -110,17 +123,13 @@
             </div>
             <div class="property-description">
               <p class="description color-text-a">
-                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit
-                neque, auctor sit amet
-                aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta.
-                Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt
-                nibh pulvinar quam id dui posuere blandit.
+                <?= $stiker->deskripsi ?>
               </p>
-              <p class="description color-text-a no-margin">
+              <!-- <p class="description color-text-a no-margin">
                 Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget
                 malesuada. Quisque velit nisi,
                 pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada.
-              </p>
+              </p> -->
             </div>
             <!-- <div class="row section-t3">
               <div class="col-sm-12">
@@ -145,7 +154,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-10 offset-md-1">
+      <!-- <div class="col-md-10 offset-md-1">
         <ul class="nav nav-pills-a nav-pills mb-3 section-t3" id="pills-tab" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab"
@@ -162,8 +171,6 @@
         </ul>
         <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane fade show active" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab">
-            <!-- <iframe src=">https://www.youtube.com/embed/HvGql8HwOIM" width="100%" height="460" frameborder="0"
-              webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
             <iframe width="100%" height="460" src="https://www.youtube.com/embed/HvGql8HwOIM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
           </div>
           <div class="tab-pane fade" id="pills-plans" role="tabpanel" aria-labelledby="pills-plans-tab">
@@ -174,7 +181,7 @@
               width="100%" height="460" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="col-md-12">
         <div class="row section-t3">
           <div class="col-sm-12">
@@ -189,11 +196,9 @@
           </div> -->
           <div class="col-md-12 col-lg-6">
             <div class="property-agent">
-              <h4 class="title-agent">Anabella Geller</h4>
+              <h4 class="title-agent">Suwaldi Mardana</h4>
               <p class="color-text-a">
-                Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
-                dui. Quisque velit nisi,
-                pretium ut lacinia in, elementum id enim.
+                Lakukan pemesanan dengan mengubungi kontak kami berikut ini, atau lakukan dengan klik tombol berikut ini.
               </p>
               <ul class="list-unstyled">
                 <li class="d-flex justify-content-between">

@@ -9,18 +9,18 @@
     <div class="row">
       <div class="col-md-12 col-lg-8">
         <div class="title-single-box">
-          <h1 class="title-single">Our Amazing Properties</h1>
-          <span class="color-text-a">Grid Properties</span>
+          <h1 class="title-single">Katalog</h1>
+          <span class="color-text-a">Daftar Stiker</span>
         </div>
       </div>
       <div class="col-md-12 col-lg-4">
         <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a href="#">Home</a>
+              <a href="./">Home</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
-              Properties Grid
+              Katalog
             </li>
           </ol>
         </nav>
@@ -34,7 +34,7 @@
 <section class="property-grid grid">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12">
+      <!-- <div class="col-sm-12">
         <div class="grid-option">
           <form>
             <select class="custom-select">
@@ -45,27 +45,30 @@
             </select>
           </form>
         </div>
-      </div>
-      <?php for ($i=0; $i < 6; $i++) { ?>
-        
+      </div> -->
+      <?php 
+      foreach($listKatalog->result() as $x) { 
+          //Encrypt ID
+          $enc_id = encrypt_url($x->id); 
+      ?>
+
         <div class="col-md-4">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="<?= base_url().'assetsPC/' ?>img/property-1.jpg" alt="" class="img-a img-fluid">
+              <img src="<?= base_url().'assetsPC/uploads/'.$x->gambar ?>" style="height: 450px;width: 350px;" alt="" class="img-a img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="#">Stiker
-                      <br /> <?= $i+1 ?></a>
+                    <a href="<?= base_url().'printcut/katalog/'.$enc_id ?>"><?= $x->nama ?></a>
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">Rp. 25.000</span>
+                    <span class="price-a">Rp. <?= $x->harga ?></span>
                   </div>
-                  <a href="<?= base_url().'printcut/katalog/tes' ?>" class="link-a">Lihat Selengkapnya
+                  <a href="<?= base_url().'printcut/katalog/'.$enc_id ?>" class="link-a">Lihat Selengkapnya
                     <span class="ion-ios-arrow-forward"></span>
                   </a>
                 </div>
@@ -73,12 +76,12 @@
                   <ul class="card-info d-flex justify-content-around">
                     <li>
                       <h4 class="card-info-title">Ukuran</h4>
-                      <span>20x20 cm
+                      <span><?= $x->ukuran ?>
                       </span>
                     </li>
                     <li>
                       <h4 class="card-info-title">Jenis</h4>
-                      <span>Skotlet</span>
+                      <span><?= $x->jenis ?></span>
                     </li>
                   </ul>
                 </div>
