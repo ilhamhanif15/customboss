@@ -118,7 +118,7 @@
           <a class="nav-link" href="<?= base_url().'printcut/about' ?>">Cara Pemesanan</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= base_url().'printcut/contact' ?>">Kontak</a>
+          <a class="nav-link" href="<?= base_url().'printcut/kontak' ?>">Kontak</a>
         </li>
       </ul>
     </div>
