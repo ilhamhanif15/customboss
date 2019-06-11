@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
   Theme Name: Regna
   Theme URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
@@ -7,16 +6,6 @@
 */
 /*--------------------------------------------------------------
 # General
-=======
-/*
-  Theme Name: Regna
-  Theme URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
-  Author: BootstrapMade.com
-  License: https://bootstrapmade.com/license/
-*/
-/*--------------------------------------------------------------
-# General
->>>>>>> f28e2a85b44ea6950614845f43185d987fbf4f0c
 --------------------------------------------------------------*/
 body {
   background: #fff;
@@ -89,13 +78,8 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-<<<<<<< HEAD
 /*--------------------------------------------------------------
 # Header
-=======
-/*--------------------------------------------------------------
-# Header
->>>>>>> f28e2a85b44ea6950614845f43185d987fbf4f0c
 --------------------------------------------------------------*/
 #header {
   padding: 30px 0;
@@ -148,13 +132,8 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s;
 }
 
-<<<<<<< HEAD
 /*--------------------------------------------------------------
 # Hero Section
-=======
-/*--------------------------------------------------------------
-# Hero Section
->>>>>>> f28e2a85b44ea6950614845f43185d987fbf4f0c
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
@@ -243,13 +222,8 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid #2dc997;
 }
 
-<<<<<<< HEAD
 /*--------------------------------------------------------------
 # Navigation Menu
-=======
-/*--------------------------------------------------------------
-# Navigation Menu
->>>>>>> f28e2a85b44ea6950614845f43185d987fbf4f0c
 --------------------------------------------------------------*/
 /* Nav Menu Essentials */
 .nav-menu, .nav-menu * {
@@ -499,17 +473,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
-<<<<<<< HEAD
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
 /* Sections Header
-=======
-/*--------------------------------------------------------------
-# Sections
---------------------------------------------------------------*/
-/* Sections Header
->>>>>>> f28e2a85b44ea6950614845f43185d987fbf4f0c
 --------------------------------*/
 .section-header .section-title {
   font-size: 32px;
@@ -526,11 +493,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #999;
 }
 
-<<<<<<< HEAD
 /* About Us Section
-=======
-/* About Us Section
->>>>>>> f28e2a85b44ea6950614845f43185d987fbf4f0c
 --------------------------------*/
 #about {
   background: #fff;
@@ -610,11 +573,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 14px;
 }
 
-<<<<<<< HEAD
 /* Facts Section
-=======
-/* Facts Section
->>>>>>> f28e2a85b44ea6950614845f43185d987fbf4f0c
 --------------------------------*/
 #facts {
   background: #f7f7f7;
@@ -634,11 +593,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 14px;
 }
 
-<<<<<<< HEAD
 /* Services Section
-=======
-/* Services Section
->>>>>>> f28e2a85b44ea6950614845f43185d987fbf4f0c
 --------------------------------*/
 #services {
   background: #fff;
@@ -711,11 +666,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   line-height: 24px;
 }
 
-<<<<<<< HEAD
 /* Call To Action Section
-=======
-/* Call To Action Section
->>>>>>> f28e2a85b44ea6950614845f43185d987fbf4f0c
 --------------------------------*/
 #call-to-action {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/call-to-action-bg.jpg) fixed center center;
@@ -761,11 +712,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   border: 2px solid #2dc997;
 }
 
-<<<<<<< HEAD
 /* Portfolio Section
-=======
-/* Portfolio Section
->>>>>>> f28e2a85b44ea6950614845f43185d987fbf4f0c
 --------------------------------*/
 #portfolio {
   background: #f7f7f7;
@@ -856,11 +803,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   top: -30px;
 }
 
-<<<<<<< HEAD
 /* Team Section
-=======
-/* Team Section
->>>>>>> f28e2a85b44ea6950614845f43185d987fbf4f0c
 --------------------------------*/
 #team {
   background: #fff;
@@ -911,11 +854,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 0 2px;
 }
 
-<<<<<<< HEAD
 /* Contact Section
-=======
-/* Contact Section
->>>>>>> f28e2a85b44ea6950614845f43185d987fbf4f0c
 --------------------------------*/
 #contact {
   background: #f7f7f7;
@@ -1021,13 +960,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #51d8ad;
 }
 
-<<<<<<< HEAD
 /*--------------------------------------------------------------
 # Footer
-=======
-/*--------------------------------------------------------------
-# Footer
->>>>>>> f28e2a85b44ea6950614845f43185d987fbf4f0c
 --------------------------------------------------------------*/
 #footer {
   background: #343b40;
