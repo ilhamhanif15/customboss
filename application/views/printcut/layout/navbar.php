@@ -1,6 +1,6 @@
 <div class="click-closed"></div>
 <!--/ Form Search Star /-->
-<div class="box-collapse">
+<!-- <div class="box-collapse">
   <div class="title-box-d">
     <h3 class="title-d">Search Property</h3>
   </div>
@@ -89,7 +89,7 @@
       </div>
     </form>
   </div>
-</div>
+</div> -->
 <!--/ Form Search End /-->
 
 <!--/ Nav Star /-->
@@ -109,23 +109,23 @@
     <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" href="<?= base_url().'printcut' ?>">Beranda</a>
+          <a class="nav-link <?php if(isset($home)){echo $home;} ?>" href="<?= base_url().'printcut' ?>">Beranda</a>
         </li>
           <li class="nav-item">
-          <a class="nav-link" href="<?= base_url().'printcut/katalog' ?>">Katalog</a>
+          <a class="nav-link <?php if(isset($katalog)){echo $katalog;} ?>" href="<?= base_url().'printcut/katalog' ?>">Katalog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= base_url().'printcut/about' ?>">Cara Pemesanan</a>
+          <a class="nav-link <?php if(isset($about)){echo $about;} ?>" href="<?= base_url().'printcut/about' ?>">Cara Pemesanan</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= base_url().'printcut/kontak' ?>">Kontak</a>
+          <a class="nav-link <?php if(isset($kontak)){echo $kontak;} ?>" href="<?= base_url().'printcut/kontak' ?>">Kontak</a>
         </li>
       </ul>
     </div>
-    <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
+    <!-- <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
       data-target="#navbarTogglerDemo01" aria-expanded="false">
       <span class="fa fa-search" aria-hidden="true"></span>
-    </button>
+    </button> -->
   </div>
 </nav>
 <!--/ Nav End /-->

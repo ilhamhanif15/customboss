@@ -79,11 +79,11 @@ $route = [
 	/*---------------------Authentication------------------------*/
 	'admin/auth' => 'Auth_C/auth',
 	'admin/logout' => 'Auth_C/logout',
+	'admin/login' => 'Auth_C/login',
 	/*-----------------------------------------------------------*/
 
 	/*--------------------Admin----------------------------------*/
 	'admin/home' => 'Admin_Main/index',
-	'admin/login' => 'Admin_Main/login',
 	'admin/katalog/list' => 'Admin_Main/katalog_list',
 	'admin/katalog/tambah' => 'Admin_Main/katalog_tambah_view',
 	'admin/katalog/tambah/proses' => 'Admin_Main/katalog_tambah',

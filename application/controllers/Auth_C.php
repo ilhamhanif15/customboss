@@ -4,9 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Auth_C extends CI_Controller {
 
 	function __construct()
-    {
+  {
 		parent::__construct();
-    }
+		if($this->session->userdata('username') !== NULL){
+				redirect('admin/home');
+			}
+  }
 
 	/*public function index()
 	{
@@ -48,6 +51,11 @@ class Auth_C extends CI_Controller {
 			$this->session->set_flashdata('error_msg_login','Username Atau Password Salah');
 			return redirect('admin/login') or exit();
 		}
+	}
+
+	public function login()
+	{
+		$this->load->view('admin/content/login');
 	}
 
 	public function logout(){

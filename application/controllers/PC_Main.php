@@ -9,6 +9,8 @@ class PC_Main extends CI_Controller {
 
 		$data = [
 			'pageContent' => 'home',
+			'home' => 'active',
+			'currentTitle' => 'PrintCut.Co',
 			'latestStiker' => $latest->result()
 		];
 		$this->load->view('printcut/layout/master',$data);
@@ -18,6 +20,8 @@ class PC_Main extends CI_Controller {
 	{
 		$data = [
 			'pageContent' => 'about',
+			'currentTitle' => 'PrintCut.Co - Cara Pemesanan',
+			'about' => 'active',
 		];
 		$this->load->view('printcut/layout/master',$data);
 	}
@@ -26,17 +30,36 @@ class PC_Main extends CI_Controller {
 	{
 		$data = [
 			'pageContent' => 'contact',
+			'currentTitle' => 'PrintCut.Co - Kontak',
+			'kontak' => 'active',
 		];
 		$this->load->view('printcut/layout/master',$data);
 	}
 
 	public function katalogGrid()
 	{
-		$listKatalog = $this->PC_Stiker->get();
+		$page = $this->input->get('page');
+		if($page == NULL || $page <= 0){
+			$page = 1;
+		}
+		$limit = 9;
+		$offset = ($page-1)*$limit;
+		$listKatalog = $this->PC_Stiker->get(NULL,$limit,$offset);
+
+		$totalRow = $this->PC_Stiker->get();
+		$totalRow = $totalRow->num_rows();
+
+		//Make Pagination
+		$totalPage = ceil($totalRow/$limit);
 
 		$data = [
 			'pageContent' => 'katalog-grid',
-			'listKatalog' => $listKatalog
+			'katalog' => 'active',
+			'currentTitle' => 'PrintCut.Co - List Katalog',
+			'listKatalog' => $listKatalog,
+			'totalRow' => $totalRow,
+			'totalPage' => $totalPage,
+			'currentPage' => $page
 		];
 		$this->load->view('printcut/layout/master',$data);
 	}
@@ -55,6 +78,8 @@ class PC_Main extends CI_Controller {
 
 		$data = [
 			'pageContent' => 'katalog-single',
+			'katalog' => 'active',
+			'currentTitle' => 'PrintCut.Co - '.$stiker[0]->nama,
 			'stiker' => $stiker[0],
 		];
 		$this->load->view('printcut/layout/master',$data);

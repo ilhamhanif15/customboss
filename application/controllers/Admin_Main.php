@@ -7,12 +7,15 @@ class Admin_Main extends CI_Controller {
 
 	function __construct()
     {
-		parent::__construct();
-		$this->listActive = [
-			'home' => '',
-			'katalog' => '',
-			'order' => ''
-		];
+			parent::__construct();
+			$this->listActive = [
+				'home' => '',
+				'katalog' => '',
+				'order' => ''
+			];
+			if($this->session->userdata('username') === NULL){
+				redirect('admin/login');
+			}
     }
 
 	public function index()
@@ -26,11 +29,6 @@ class Admin_Main extends CI_Controller {
 			'sidebar_active' => $sa
 		];
 		$this->load->view('admin/layout/master',$data);
-	}
-
-	public function login()
-	{
-		$this->load->view('admin/content/login');
 	}
 
 	public function katalog_list()

@@ -17,6 +17,7 @@
 <section class="contact">
   <div class="container">
     <div class="row">
+      
       <div class="col-md-6 col-lg-5">
             <img src="<?= base_url().'assetsPC/' ?>img/home-img-2.jpg" alt="" class="img-fluid">
       </div>
@@ -100,6 +101,7 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>

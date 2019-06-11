@@ -11,6 +11,7 @@
         <div class="title-single-box">
           <h1 class="title-single">Katalog</h1>
           <span class="color-text-a">Daftar Stiker</span>
+          <span class="color-text-a">Total Katalog : <?= $totalRow ?></span>
         </div>
       </div>
       <div class="col-md-12 col-lg-4">
@@ -96,22 +97,22 @@
       <div class="col-sm-12">
         <nav class="pagination-a">
           <ul class="pagination justify-content-end">
-            <li class="page-item disabled">
-              <a class="page-link" href="#" tabindex="-1">
+            <li class="page-item">
+              <a class="page-link" href="<?php if($currentPage != 1){echo './katalog?page='.($currentPage-1); } ?>" tabindex="-1">
                 <span class="ion-ios-arrow-back"></span>
               </a>
             </li>
-            <li class="page-item">
-              <a class="page-link" href="#">1</a>
+            <?php 
+            for ($i=0; $i < $totalPage; $i++) {
+            ?>
+            <li class="page-item <?php if($currentPage == $i+1){echo 'active'; } ?>">
+              <a class="page-link" href="./katalog?page=<?= $i+1 ?>"><?= $i+1 ?></a>
             </li>
-            <li class="page-item active">
-              <a class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">3</a>
-            </li>
+            <?php 
+            }
+            ?>
             <li class="page-item next">
-              <a class="page-link" href="#">
+              <a class="page-link" href="<?php if($currentPage != $totalPage){echo './katalog?page='.($currentPage+1); } ?>">
                 <span class="ion-ios-arrow-forward"></span>
               </a>
             </li>
@@ -124,7 +125,7 @@
 <!--/ Property Grid End /-->
 
 <!--/ footer Star /-->
-<section class="section-footer">
+<!-- <section class="section-footer">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-4">
@@ -210,4 +211,4 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
