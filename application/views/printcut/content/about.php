@@ -40,7 +40,7 @@
               <li>Metode pembayaran melalui Cash On Delivery (COD) hanya tersedia untuk produk-produk tertentu dan untuk ke destinasi tertentu saja.</li>
             </p>
             <div class="col-md-12">
-              <a href="<?= base_url().'printcut/contact' ?>">
+              <a href="<?= base_url().'printcut/kontak' ?>">
                   <button type="submit" class="btn btn-a">Lebih Lanjut</button>
               </a>
             </div>
