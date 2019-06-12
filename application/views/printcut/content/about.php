@@ -35,6 +35,7 @@
               <li>Bank Mandiri: 123–0090–111–909</li>
               <li>Bank BCA: 372–171–7273</li>
               <li>Bank BNI: 234–171–1933</li>
+              <li>Bank BNI: 234–171–1933</li>
             </p>
             <p class="color-text-a">
               <b>Pembayaran melalui Cash On Delivery (COD)</b>
